@@ -5794,10 +5794,10 @@ https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
-huddle01-client@^1.1.2:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/huddle01-client/-/huddle01-client-1.2.0.tgz#0bf31ad0c4850a1b1753a74cca2a3c815e81f61a"
-  integrity sha512-9o2L7niWRh3y+wa3bsiO18JSwRjeVFHXaB3Iv94aD3+g0VPJiBXYppEpDwzXWMmcOQN0Bzz8ebIe83G9E4zOnA==
+huddle01-client@^1.2.1:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/huddle01-client/-/huddle01-client-1.2.2.tgz#9fa698fd2d700578ef7441e1ba0ecf18f6e571fd"
+  integrity sha512-hZEAbQttqKuDTeYuxyqIl7EUv9nSo9HRw+fjrW0tCpwBHNZNVyC3wSh6LblpylsSd9Pyqq1oeHDnQNrQD+y4SA==
   dependencies:
     bowser "^2.11.0"
     events "^3.3.0"
@@ -7564,9 +7564,9 @@ nan@^2.12.1:
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 nanoid@^3.1.23:
-  version "3.1.25"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
-  integrity sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.2.tgz#c89622fafb4381cd221421c69ec58547a1eec557"
+  integrity sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
