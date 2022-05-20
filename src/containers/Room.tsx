@@ -21,8 +21,9 @@ function Room() {
   const [roomState, setRoomState] = useState<string>("");
   const [micState, setMicState] = useState<boolean>(false);
   const [webcamState, setWebcamState] = useState<boolean>(false);
+  const [recordingState, setRecordingState] = useState<boolean>(false);
   const [screenshareState, setScreenshareState] = useState<boolean>(false);
-
+  const [streamingState, setStreamingState] = useState<boolean>(false);
   const [peers, setPeers] = useState<HuddleTypes.IPeer[]>([]);
   const [consumerStreams, setConsumerStreams] = useState<IConsumerStreams>({
     video: [],
@@ -313,22 +314,51 @@ function Room() {
     if (!huddle) return;
     try {
       const status: boolean = await huddle.startRecording();
-      if (status) console.log("recording successfully initiated");
+      if (status) {
+        console.log("recording successfully initiated");
+        setRecordingState(true);
+      }
     } catch (error: any) {
       console.error(error);
     }
   };
 
-  const stopRecorder = async () => {
+  const stopRecording = async () => {
     if (!huddle) return;
     try {
       const status: boolean = await huddle.stopRecording();
-      if (status) console.log("recording successfully stopped");
+      if (status) {
+        console.log("recording successfully stopped");
+        setRecordingState(false);
+      }
     } catch (error: any) {
       console.error(error);
     }
   };
-
+  const startStreaming = async () => {
+    if (!huddle) return;
+    try {
+      const status: boolean = await huddle.startStreaming();
+      if (status) {
+        console.log("Streaming successfully started");
+        setStreamingState(true);
+      }
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
+  const stopStreaming = async () => {
+    if (!huddle) return;
+    try {
+      const status: boolean = await huddle.stopStreaming();
+      if (status) {
+        console.log("Streaming successfully stopped");
+        setStreamingState(false);
+      }
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
   return (
     <div className="App">
       <div className="me-ports">
@@ -351,6 +381,12 @@ function Room() {
         </button>
         <button onClick={screenshareState ? stopScreenshare : startScreenshare}>
           {screenshareState ? "Disable Screenshare" : "Enable Screenshare"}
+        </button>{" "}
+        <button onClick={recordingState ? stopRecording : startRecording}>
+          {recordingState ? "Disable Recording" : "Enable Recording"}
+        </button>
+        <button onClick={streamingState ? stopStreaming : startStreaming}>
+          {streamingState ? "Disable Streaming" : "Enable Streaming"}
         </button>
         {/* <button onClick={toggleWebcam}>Toggle Webcam</button> */}
       </div>

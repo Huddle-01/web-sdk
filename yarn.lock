@@ -5794,10 +5794,10 @@ https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
-huddle01-client@^1.1.2:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/huddle01-client/-/huddle01-client-1.2.0.tgz#0bf31ad0c4850a1b1753a74cca2a3c815e81f61a"
-  integrity sha512-9o2L7niWRh3y+wa3bsiO18JSwRjeVFHXaB3Iv94aD3+g0VPJiBXYppEpDwzXWMmcOQN0Bzz8ebIe83G9E4zOnA==
+huddle01-client@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/huddle01-client/-/huddle01-client-1.2.2.tgz#9fa698fd2d700578ef7441e1ba0ecf18f6e571fd"
+  integrity sha512-hZEAbQttqKuDTeYuxyqIl7EUv9nSo9HRw+fjrW0tCpwBHNZNVyC3wSh6LblpylsSd9Pyqq1oeHDnQNrQD+y4SA==
   dependencies:
     bowser "^2.11.0"
     events "^3.3.0"
