@@ -29,6 +29,8 @@ Thus, on component mount, we add:
 history.push(`?roomId=${config.roomId}`);
 ```
 
+> NOTE: functionality of livestreaming and recording working on your application is subject to mandating the above specified schema on your URL 
+
 Initialise a new object
 
 ```typescript
@@ -298,5 +300,36 @@ Please refer to the demo app where we use local React states to handle these dat
   };
   ```
 
-**NOTE:** Recordings will only work in production environments \(or run a local process of the recorder on your machine if you want to test in development environments\)
+* **huddle.startStreaming\(\)**
+
+  ```typescript
+  const startStreaming = async () => {
+    if (!huddle) return;
+    try {
+      const status: boolean = await huddle.startStreaming();
+      if (status !== true)
+        console.error("an error occurred while initiating streaming");
+      console.log("streaming initiated");
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
+  ```
+
+* **huddle.stopStreaming\(\)**
+
+  ```typescript
+  const stopStreaming = async () => {
+    if (!huddle) return;
+    try {
+      const status: boolean = await huddle.stopStreaming();
+      if (status !== true)
+        console.error("an error occurred while initiating streaming");
+      console.log("streaming stopped");
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
+
+**NOTE:** Recordings and live-streaming will only work in production environments \(or reach out to the team to run a local process of the recorder on your machine if you want to test in development environments\)
 
